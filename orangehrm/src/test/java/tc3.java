@@ -22,21 +22,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
-public class tc1 extends reporter{
+public class tc3 extends reporter{
 	WebDriver driver;
   @Test
   public void f() throws IOException {
-	  logger = extent.startTest("Test1");
-	  System.out.println("Test 1 is running");
+	  logger = extent.startTest("Test3");
+	  System.out.println("Test 3 is running");
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 WebElement login ;
 
 login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/h5"))));
 	  String act =login.getText();
-	  String exp="Login";
+	  String exp="Loggin";
 	if(act.equals(exp))
 	{
-		logger.log(LogStatus.PASS," the test 1 passes");
+		logger.log(LogStatus.PASS," the test 3 passes");
 		assertTrue(true);
 	}
 	else {
@@ -46,7 +46,7 @@ login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@
 		
 		File srcFile;
 		srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		Files.copy(srcFile, new File("C:\\Users\\Administrator\\Documents\\Testresults\\a.jpeg"));
+		Files.copy(srcFile, new File("C:\\Users\\Administrator\\Documents\\Testresults\\tc3.jpeg"));
 			logger.log(LogStatus.FAIL," the test 1 failed");
 			assertTrue(false);
 		

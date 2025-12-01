@@ -5,7 +5,6 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import org.testng.annotations.BeforeTest;
 
-
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
@@ -22,32 +21,34 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
-public class tc1 extends reporter{
+public class tc4 extends reporter{
 	WebDriver driver;
   @Test
   public void f() throws IOException {
-	  logger = extent.startTest("Test1");
-	  System.out.println("Test 1 is running");
+	  logger = extent.startTest("Test4");
+	  System.out.println("Test 4 is running");
+	  
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-WebElement login ;
-
-login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/h5"))));
-	  String act =login.getText();
-	  String exp="Login";
+		WebElement login,button ;
+		login =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name=\"username\"]")));
+	  
+	login.sendKeys("Admin");
+	 driver.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("admin123");
+	 driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")).click();
+	 String exp="Dasdhboard";
+	 button =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[1]/div[1]/span/h6")));
+	 String act=button.getText();	 
 	if(act.equals(exp))
 	{
-		logger.log(LogStatus.PASS," the test 1 passes");
+		logger.log(LogStatus.PASS," the test 4 passes");
 		assertTrue(true);
 	}
 	else {
-//		File ss=a.getScreenshotAs(OutputType.FILE);
-//		File ssdest = new File("C:\\Users\\Administrator\\Documents\\Selenium demo\\mavenorangehrm\\screenshots\\tc1.jpeg");
-//	
 		
 		File srcFile;
 		srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		Files.copy(srcFile, new File("C:\\Users\\Administrator\\Documents\\Testresults\\a.jpeg"));
-			logger.log(LogStatus.FAIL," the test 1 failed");
+		Files.copy(srcFile, new File("C:\\Users\\Administrator\\Documents\\Testresults\\tc4.jpeg"));
+			logger.log(LogStatus.FAIL," the test 2 failed");
 			assertTrue(false);
 		
 		
@@ -57,8 +58,13 @@ login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@
   @BeforeTest
   public void beforeTest() {
 	  driver= new EdgeDriver();
-	 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+	  driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+	  
+	 
+	  
   }
+  
+ 
 
   @AfterTest
   public void afterTest() {

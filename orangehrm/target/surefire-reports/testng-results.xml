@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-20T18:34:52 IST" name="Suite" finished-at="2025-11-20T18:35:20 IST" duration-ms="28169">
+    <groups>
+    </groups>
+    <test started-at="2025-11-20T18:34:52 IST" name="Test1" finished-at="2025-11-20T18:34:58 IST" duration-ms="5824">
+      <class name="tc1">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tc1@56de5251]" started-at="2025-11-20T18:34:52 IST" name="beforeTest" finished-at="2025-11-20T18:34:57 IST" duration-ms="5085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="f()[pri:0, instance:tc1@56de5251]" started-at="2025-11-20T18:34:57 IST" name="f" finished-at="2025-11-20T18:34:58 IST" duration-ms="611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tc1@56de5251]" started-at="2025-11-20T18:34:58 IST" name="afterTest" finished-at="2025-11-20T18:34:58 IST" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- tc1 -->
+    </test> <!-- Test1 -->
+    <test started-at="2025-11-20T18:34:58 IST" name="Test2" finished-at="2025-11-20T18:35:05 IST" duration-ms="6803">
+      <class name="tc2">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tc2@1184ab05]" started-at="2025-11-20T18:34:58 IST" name="beforeTest" finished-at="2025-11-20T18:35:02 IST" duration-ms="3895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="f()[pri:0, instance:tc2@1184ab05]" started-at="2025-11-20T18:35:02 IST" name="f" finished-at="2025-11-20T18:35:05 IST" duration-ms="2773" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tc2@1184ab05]" started-at="2025-11-20T18:35:05 IST" name="afterTest" finished-at="2025-11-20T18:35:05 IST" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- tc2 -->
+    </test> <!-- Test2 -->
+    <test started-at="2025-11-20T18:35:05 IST" name="Test3" finished-at="2025-11-20T18:35:09 IST" duration-ms="4754">
+      <class name="tc3">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tc3@1b1473ab]" started-at="2025-11-20T18:35:05 IST" name="beforeTest" finished-at="2025-11-20T18:35:09 IST" duration-ms="4022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="f()[pri:0, instance:tc3@1b1473ab]" started-at="2025-11-20T18:35:09 IST" name="f" finished-at="2025-11-20T18:35:09 IST" duration-ms="647" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at tc3.f(tc3.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tc3@1b1473ab]" started-at="2025-11-20T18:35:09 IST" name="afterTest" finished-at="2025-11-20T18:35:09 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- tc3 -->
+    </test> <!-- Test3 -->
+    <test started-at="2025-11-20T18:35:09 IST" name="Test4" finished-at="2025-11-20T18:35:16 IST" duration-ms="6643">
+      <class name="tc4">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tc4@36c88a32]" started-at="2025-11-20T18:35:09 IST" name="beforeTest" finished-at="2025-11-20T18:35:13 IST" duration-ms="3886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="f()[pri:0, instance:tc4@36c88a32]" started-at="2025-11-20T18:35:13 IST" name="f" finished-at="2025-11-20T18:35:16 IST" duration-ms="2674" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at tc4.f(tc4.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tc4@36c88a32]" started-at="2025-11-20T18:35:16 IST" name="afterTest" finished-at="2025-11-20T18:35:16 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- tc4 -->
+    </test> <!-- Test4 -->
+    <test started-at="2025-11-20T18:35:16 IST" name="Test5" finished-at="2025-11-20T18:35:20 IST" duration-ms="4098">
+      <class name="tc5">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tc5@6ef888f6]" started-at="2025-11-20T18:35:16 IST" name="beforeTest" finished-at="2025-11-20T18:35:20 IST" duration-ms="3474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="f()[pri:0, instance:tc5@6ef888f6]" started-at="2025-11-20T18:35:20 IST" name="f" finished-at="2025-11-20T18:35:20 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tc5@6ef888f6]" started-at="2025-11-20T18:35:20 IST" name="afterTest" finished-at="2025-11-20T18:35:20 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- tc5 -->
+    </test> <!-- Test5 -->
+    <test started-at="2025-11-20T18:35:20 IST" name="Reporter" finished-at="2025-11-20T18:35:20 IST" duration-ms="1">
+      <class name="reporter">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:reporter@78b66d36]" started-at="2025-11-20T18:34:52 IST" name="beforeSuite" finished-at="2025-11-20T18:34:52 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="f()[pri:0, instance:reporter@78b66d36]" started-at="2025-11-20T18:35:20 IST" name="f" finished-at="2025-11-20T18:35:20 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:reporter@78b66d36]" started-at="2025-11-20T18:35:20 IST" name="afterSuite" finished-at="2025-11-20T18:35:20 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- reporter -->
+    </test> <!-- Reporter -->
+  </suite> <!-- Suite -->
+</testng-results>

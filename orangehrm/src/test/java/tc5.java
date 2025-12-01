@@ -22,21 +22,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
-public class tc1 extends reporter{
+public class tc5 extends reporter{
 	WebDriver driver;
   @Test
   public void f() throws IOException {
-	  logger = extent.startTest("Test1");
-	  System.out.println("Test 1 is running");
+	  logger = extent.startTest("Test5");
+	  System.out.println("Test5 is running");
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 WebElement login ;
 
-login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/h5"))));
+login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div/p[1]"))));
 	  String act =login.getText();
-	  String exp="Login";
+	  String exp="Username : Admin";
 	if(act.equals(exp))
 	{
-		logger.log(LogStatus.PASS," the test 1 passes");
+		logger.log(LogStatus.PASS," the test 5 passes");
 		assertTrue(true);
 	}
 	else {
@@ -46,8 +46,8 @@ login =wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//*[@
 		
 		File srcFile;
 		srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		Files.copy(srcFile, new File("C:\\Users\\Administrator\\Documents\\Testresults\\a.jpeg"));
-			logger.log(LogStatus.FAIL," the test 1 failed");
+		Files.copy(srcFile, new File("C:\\Users\\Administrator\\Documents\\Testresults\\tc5.jpeg"));
+			logger.log(LogStatus.FAIL," the test 5 failed");
 			assertTrue(false);
 		
 		
